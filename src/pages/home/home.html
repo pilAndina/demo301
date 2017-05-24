@@ -17,4 +17,15 @@
   <input type="text" [value]="twitter" (input)="updateTwitter( $event )">
   <h2>Asignar y ejeuctar (ngModel)</h2>
   <input type="text" [(ngModel)]="twitter">
+  <button ion-button (click)="addPerson()">agregar</button>
+  <button ion-button (click)="removePerson()">remove</button>
+  <ion-list>
+    <ion-item *ngIf="persons.length == 0">La lista esta vacia</ion-item>
+    <ion-item *ngFor="let person of persons">
+      {{ person.getName() }}-{{ person.getAge() }}
+      <strong *ngIf="person.getIsSingle() == true">Es feliz</strong>
+      <strong *ngIf="person.getIsSingle() == false">No Es feliz</strong>
+      <strong *ngIf="person.getAge() > 30">tiene experiencia</strong>
+    </ion-item>
+  </ion-list>
 </ion-content>
