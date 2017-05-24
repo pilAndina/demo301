@@ -28,4 +28,6 @@
       <strong *ngIf="person.getAge() > 30">tiene experiencia</strong>
     </ion-item>
   </ion-list>
+  <p #myVar>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nisi illum, aspernatur a aliquam molestias dolore repellat necessitatibus veniam dolorem eligendi ratione ex minus voluptate odio numquam at, nostrum rerum.</p>
+  <button ion-button (click)="changeText( myVar )">cambiar texto</button>
 </ion-content>

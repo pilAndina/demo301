@@ -53,4 +53,8 @@ export class HomePage {
     this.persons.push(newPerson);
   }
 
+  changeText( element: HTMLHtmlElement ){
+    element.innerText = 'bla bla bla';
+  }
+
 }
