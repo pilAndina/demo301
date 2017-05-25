@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { Person } from './person';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -56,6 +57,10 @@ export class HomePage {
 
   changeText( element: HTMLHtmlElement ){
     element.innerText = 'bla bla bla';
+  }
+
+  goToCitiesPage(){
+    this.navCtrl.push('CitiesPage');
   }
 
 }
