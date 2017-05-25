@@ -10,6 +10,7 @@ export class HomePage {
 
   persons: Person[] = [];
   twitter: string = '@nicobytes'; 
+  name: string;
 
   constructor(public navCtrl: NavController) {
 
