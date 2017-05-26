@@ -15,6 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CitiesPage {
 
   rockbands: any[] = [];
+  today: Date = new Date();
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.rockbands.push({
