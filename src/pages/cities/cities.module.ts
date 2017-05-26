@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { CitiesPage } from './cities';
 import { RockbandComponentModule } from '../../components/rockband/rockband.module';
+import { HighlightDirectiveModule } from '../../directives/highlight/highlight.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { RockbandComponentModule } from '../../components/rockband/rockband.modu
   ],
   imports: [
     IonicPageModule.forChild(CitiesPage),
-    RockbandComponentModule
+    RockbandComponentModule,
+    HighlightDirectiveModule
   ],
   exports: [
     CitiesPage
