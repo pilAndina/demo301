@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { CitiesPage } from './cities';
+import { RockbandComponentModule } from '../../components/rockband/rockband.module';
 
 @NgModule({
   declarations: [
@@ -8,6 +9,7 @@ import { CitiesPage } from './cities';
   ],
   imports: [
     IonicPageModule.forChild(CitiesPage),
+    RockbandComponentModule
   ],
   exports: [
     CitiesPage

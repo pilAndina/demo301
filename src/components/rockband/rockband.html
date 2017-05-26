@@ -1,0 +1,26 @@
+<!-- Generated template for the RockbandComponent component -->
+<ion-card>
+  <img [src]="rockband.img" alt="">
+  <ion-card-header>
+    <strong>{{ rockband.title }}</strong>
+  </ion-card-header>
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="people" item-left></ion-icon>
+      {{ rockband.people }} integrantes
+    </button>
+    <button ion-item>
+      <ion-icon name="play" item-left></ion-icon>
+      {{ rockband.albums }} albums 
+    </button>
+    <button ion-item>
+      <ion-icon name="home" item-left></ion-icon>
+      {{ rockband.fans }} fans 
+    </button>
+  </ion-list> 
+  <ion-card-content>
+    <p>{{ rockband.text }}</p>
+    <button ion-button (click)="showAlert()">Hola</button>
+    <button ion-button color="dark" (click)="goToEventsPage()">ver conciertos</button>
+  </ion-card-content>
+</ion-card>
