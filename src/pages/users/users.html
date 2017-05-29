@@ -14,8 +14,13 @@
 
 
 <ion-content padding>
-  <h1>user page dfkjhddkfjhgkdjf</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui aliquam odio, sed magnam commodi! Accusamus expedita amet nostrum esse blanditiis, consequuntur officiis fuga, recusandae aliquid rem hic voluptatem provident, error!</p>
-  <button ion-button (click)="goToHeroesPage()">ir a heroes page</button>
-  <pil-rockband [rockband]="rockband"></pil-rockband>
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-avatar item-left>
+        <img [src]="user.picture.medium" alt="">
+      </ion-avatar>
+      <h2>{{ user.name.title | uppercase }} {{ user.name.last | uppercase }}</h2>
+      <p>{{ user.email }}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>

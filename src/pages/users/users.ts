@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the UsersPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { UsersProvider } from '../../providers/users/users';
+
 @IonicPage()
 @Component({
   selector: 'page-users',
@@ -14,24 +10,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class UsersPage {
 
-  rockband: any=  {
-    title: 'Nirvana',
-    img: 'http://www.informabtl.com/wp-content/uploads/2017/02/nirvana-with-the-lights-out-cover.jpg',
-    text: 'sfkjhsadf sdjfhasdkf',
-    people: 4,
-    albums: 12,
-    fans: 23476
-  }
+  users: any[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private usersProvider: UsersProvider
+  ) {
+    this.usersProvider.getUsers()
+    .then(data=>{
+      this.users = data.results;
+    })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UsersPage');
-  }
-
-  goToHeroesPage(){
-    this.navCtrl.push('HeroesPage');
   }
 
 }

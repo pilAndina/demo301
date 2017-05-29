@@ -8,10 +8,10 @@
 <ion-content padding>
   <h1 pil-highlight>hello!!!!!!</h1>
   <p pil-highlight>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit nulla, cumque deleniti. Sequi, optio, voluptatibus! Magnam minima, quisquam, eligendi molestiae dicta voluptate praesentium, nisi explicabo, repudiandae omnis eum suscipit nulla.</p>
-  <p>{{ 'hola mundo' | uppercase | reverse }}</p>
-  <p>{{ '0.5' | percent | reverse }}</p>
-  <p>{{ '0.98' | percent | reverse }}</p>
-  <p>{{ today | date:'yy / MM / dd -  hh:mm:ss a' | reverse }}</p>
+  <p>{{ 'hola mundo' | uppercase  }}</p>
+  <p>{{ '0.5' | percent  }}</p>
+  <p>{{ '0.98' | percent  }}</p>
+  <p>{{ today | date:'yy / MM / dd -  hh:mm:ss a'}}</p>
   <p>{{ 'este texto' | reverse | uppercase }}</p>
   <pil-rockband *ngFor="let rockband of rockbands" 
   [rockband]="rockband"></pil-rockband>
